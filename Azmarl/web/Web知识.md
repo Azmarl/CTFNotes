@@ -19,3 +19,4 @@ http://a4b822a9-e181-4395-b9be-014a4acc375e.node4.buuoj.cn:81/?file=php://filter
 
 11. 如果`cat`被过滤，可以用`tac`代替，为反向读取指令
 12. 对flag敏感词的过滤可以用?代替其中一个字符如`fla?`
+12. 如果不知道flag的路径,可以用`/proc/self/pwd/`代表是当前路径，构造`/proc/self/pwd/flag.txt`读取文件

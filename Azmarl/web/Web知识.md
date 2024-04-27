@@ -25,3 +25,4 @@ http://a4b822a9-e181-4395-b9be-014a4acc375e.node4.buuoj.cn:81/?file=php://filter
 16. 如果在url中发现`?xxxx=xxx`，且参数值是php常见文件名，说明大概率可以用php伪协议`php://filter/read.base64-encode/resource=xxx(xxx.php)`读取文件获取源码
     1. 读取的文件是否携带php后缀取决于初始参数值是否携带
 17. system()中执行的多个命令用`;`分隔，如果要放弃执行后续的原命令可以在参数中最后的分号后用`#`截断
+17. POST特殊符号传参原本参数名如`s_s`的在传参时要把参数名修改为`s[s`，因为特殊符号会在传参的时候转为下划线
